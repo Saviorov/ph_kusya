@@ -44,7 +44,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background: #070A1B;
+  background-color: var(--darkOrange);
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   display: -webkit-box;
@@ -323,9 +323,33 @@ a {
   transition: 0.5s;
 }
 
+.title {
+  text-align: center;
+  font-size: 4rem;
+  font-family: "The Nautigal", cursive;
+}
+
+.title span {
+  padding: 30px 0 8px;
+  position: relative;
+}
+
+.title span::before {
+  content: "";
+  position: absolute;
+  left: 1%;
+  bottom: 1px;
+  width: 280px;
+  height: 14px;
+  -webkit-transform: skew(-12deg) translateX(-50%);
+          transform: skew(-12deg) translateX(-50%);
+  background: var(--darkOrange);
+  z-index: -1;
+}
+
 .about__title span::before {
-  -webkit-transform: skew(-12deg) translateX(90%);
-          transform: skew(-12deg) translateX(90%);
+  -webkit-transform: skew(-12deg) translateX(70%);
+          transform: skew(-12deg) translateX(70%);
 }
 
 h1:first-of-type {
@@ -422,13 +446,13 @@ section {
 }
 
 .listing-carousel-button.listing-carousel-button-next {
-  right: -30px;
+  right: 11px;
   padding-right: 20px;
   border-radius: 60px 0 0 60px;
 }
 
 .listing-carousel-button.listing-carousel-button-prev {
-  left: -30px;
+  left: 1px;
   padding-left: 20px;
   border-radius: 0 60px 60px 0;
 }
@@ -680,8 +704,19 @@ section {
 }
 
 @media screen and (max-width: 557px) {
+  html {
+    font-size: 60%;
+  }
+  .gallery__title span::before {
+    -webkit-transform: skew(-12deg) translateX(-10%);
+            transform: skew(-12deg) translateX(-10%);
+  }
   .gallery__block {
     width: 100%;
+  }
+  .about__title span::before {
+    -webkit-transform: skew(-12deg) translateX(10%);
+            transform: skew(-12deg) translateX(10%);
   }
 }
 
