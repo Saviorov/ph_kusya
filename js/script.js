@@ -123,8 +123,7 @@ function displayMenuButtons() {
 
 
 
-// Testimonial sliderr
-//   all ------------------
+// Testimonial slider
 function initParadoxWay() {
     "use strict";
 
@@ -148,7 +147,7 @@ function initParadoxWay() {
             },
             breakpoints: {
                 1024: {
-                    slidesPerView: 3,
+                    slidesPerView: 2,
                 },
 
             }
@@ -156,18 +155,15 @@ function initParadoxWay() {
     }
 
     // bubbles -----------------
-
-
-    setInterval(function () {
-        var size = randomValue(sArray);
-        $('.bubbles').append('<div class="individual-bubble" style="left: ' + randomValue(bArray) + 'px; width: ' + size + 'px; height:' + size + 'px;"></div>');
-        $('.individual-bubble').animate({
-            'bottom': '100%',
-            'opacity': '-=0.7'
-        }, 4000, function () {
-            $(this).remove()
-        });
-    }, 350);
+    // setInterval(function () {
+    //     $('.bubbles').append('<div class="individual-bubble" style="left: ' + randomValue(bArray) + 'px; width: ' + size + 'px; height:' + size + 'px;"></div>');
+    //     $('.individual-bubble').animate({
+    //         'bottom': '100%',
+    //         'opacity': '-=0.7'
+    //     }, 4000, function () {
+    //         $(this).remove()
+    //     });
+    // }, 350);
 
 }
 
@@ -213,3 +209,26 @@ Fancybox.bind('[data-fancybox="gallery"]', {
 });
 
 
+
+
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+})
+//fixedNavbar
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', function () {
+    const scrollHeight = window.pageYOffset;
+    const navHeight = navbar.getBoundingClientRect().height;
+    if (scrollHeight > navHeight) {
+        navbar.classList.add('fixed-nav');
+        navbar.classList.add('fixed-color');
+    } else {
+        navbar.classList.remove('fixed-nav');
+    };
+});
