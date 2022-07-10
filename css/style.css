@@ -44,15 +44,14 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--darkOrange);
+  background: #070A1B;
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .show-link {
@@ -322,30 +321,6 @@ a {
      object-fit: cover;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-}
-
-.title {
-  text-align: center;
-  font-size: 4rem;
-  font-family: "The Nautigal", cursive;
-}
-
-.title span {
-  padding: 30px 0 8px;
-  position: relative;
-}
-
-.title span::before {
-  content: "";
-  position: absolute;
-  left: 1%;
-  bottom: 1px;
-  width: 280px;
-  height: 14px;
-  -webkit-transform: skew(-12deg) translateX(-50%);
-          transform: skew(-12deg) translateX(-50%);
-  background: var(--darkOrange);
-  z-index: -1;
 }
 
 .about__title span::before {
