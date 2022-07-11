@@ -1,3 +1,5 @@
+
+
 :root {
   --red: hsl(0, 78%, 62%);
   --cyan: hsl(180, 62%, 55%);
@@ -121,66 +123,6 @@ a {
   background-color: var(--lightBlue);
 }
 
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  .nav-menu {
-    position: fixed;
-    left: -100%;
-    top: 70px;
-    gap: 0;
-    flex-direction: column;
-    background-color: var(--darkOrange);
-    width: 100%;
-    text-align: center;
-    transition: 0.3s;
-    z-index: 4;
-  }
-
-  .nav-item {
-    margin: 16px 0;
-  }
-
-  .nav-menu.active {
-    left: 0;
-  }
-
-  .nav-link {
-    font-size: 2rem;
-    transition: 0.7s ease;
-    padding: 30px 0 8px;
-    position: relative;
-    &:hover::before {
-      content: "";
-      position: absolute;
-      left: 25%;
-      bottom: 1px;
-      width: 130px;
-      height: 12px;
-      transform: skew(-12deg) translateX(-50%);
-      background: var(--lightBlue);
-      z-index: -1;
-    }
-    &:hover {
-      color: var(--lightBlue);
-    }
-  }
-}
-
 // Navbar
 .navbar {
   display: flex;
@@ -296,7 +238,10 @@ a {
 }
 
 .header__photo {
-  flex: 1;
+  display: flex;
+  width: 100%;
+  padding: 1% 2%;
+  height: 98vh;
   overflow: hidden;
   transition: 0.5s;
   margin: 0 2%;
@@ -658,6 +603,66 @@ section {
   .about__title {
     span::before {
       transform: skew(-12deg) translateX(10%);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: var(--darkOrange);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    z-index: 4;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .nav-menu.active {
+    left: 0;  
+  }
+
+  .nav-link {
+    font-size: 2rem;
+    transition: 0.7s ease;
+    padding: 30px 0 8px;
+    position: relative;
+    &:hover::before {
+      content: "";
+      position: absolute;
+      left: 25%;
+      bottom: 1px;
+      width: 130px;
+      height: 12px;
+      transform: skew(-12deg) translateX(-50%);
+      background: var(--lightBlue);
+      z-index: -1;
+    }
+    &:hover {
+      color: var(--lightBlue);
     }
   }
 }

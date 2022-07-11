@@ -232,3 +232,29 @@ window.addEventListener('scroll', function () {
         navbar.classList.remove('fixed-nav');
     };
 });
+
+
+// slider 
+$('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    responsiveClass: true,
+    responsive: {
+        // от 0 и больше
+        0: {
+            items: 1,
+            nav: true
+        },
+        // от 600 и больше
+        641: {
+            items: 2,
+            nav: false
+        },
+        // от 1000 и больше
+        1000: {
+            items: 3,
+            nav: true,
+            loop: false
+        }
+    }
+})
