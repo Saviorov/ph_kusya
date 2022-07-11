@@ -1,62 +1,62 @@
 const menu = [
     {
         id: 1,
-        category: "nature",
+        category: "Природа",
         img: "./images/header-image-one.jpg",
     },
     {
         id: 2,
-        category: "nature",
+        category: "Природа",
         img: "./images/header-image-two.jpg",
     },
     {
         id: 3,
-        category: "nature",
+        category: "Природа",
         img: "./images/header-image-three.jpg",
     },
     {
         id: 4,
-        category: "nature",
+        category: "Природа",
         img: "./images/header-image-one.jpg",
     },
     {
         id: 5,
-        category: "people",
+        category: "Природа",
         img: "./images/header-image-one.jpg",
     },
     {
         id: 6,
-        category: "people",
+        category: "Люди",
         img: "./images/header-image-one.jpg",
     },
     {
         id: 7,
-        category: "people",
+        category: "Люди",
         img: "./images/header-image-one.jpg",
     },
     {
         id: 8,
-        category: "people",
+        category: "Люди",
         img: "./images/header-image-one.jpg",
     },
     {
         id: 9,
-        category: "people",
+        category: "Люди",
         img: "./images/header-image-one.jpg",
     },
     {
         id: 10,
-        category: "people",
+        category: "Природа",
         img: "./images/header-image-one.jpg",
     },
     {
         id: 11,
-        category: "people",
+        category: "Природа",
         img: "./images/header-image-one.jpg",
     },
     {
         id: 12,
-        category: "people",
+        category: "Люди",
         img: "./images/header-image-one.jpg",
     },
 ];
@@ -94,7 +94,7 @@ function displayMenuButtons() {
             values.push(item.category)
         }
         return values
-    }, ['all'])
+    }, ['Все'])
     const categoryBtns = categories.map(function (category) {
         return `<button type="button" class="filter-btn button-51" role="button" data-id=${category}>${category}</button>`
     }).join('');
@@ -112,7 +112,7 @@ function displayMenuButtons() {
                 }
             });
             // console.log(menuCategory);
-            if (category === 'all') {
+            if (category === 'Все') {
                 displayMenuItems(menu)
             } else {
                 displayMenuItems(menuCategory)

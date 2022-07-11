@@ -62,11 +62,6 @@ li {
   list-style: none;
 }
 
-a {
-  color: white;
-  text-decoration: none;
-}
-
 .navbar {
   margin: 0 auto;
   align-items: center;
@@ -135,7 +130,7 @@ a {
 
 a {
   text-decoration: none;
-  color: var(--black);
+  color: var(--darkOrange);
 }
 // button
 .btn-container {
@@ -146,6 +141,8 @@ a {
   align-self: center;
   margin: 0 auto;
   display: flex;
+  margin-left: 3rem;
+
 }
 .button-51 {
   margin-bottom: 1.5rem;
@@ -449,6 +446,8 @@ section {
 }
 .testimonials-carousel .swiper-slide {
   padding: 30px 0;
+}
+.text-link{
 }
 .testi-avatar {
   position: absolute;

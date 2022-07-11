@@ -63,11 +63,6 @@ li {
   list-style: none;
 }
 
-a {
-  color: white;
-  text-decoration: none;
-}
-
 .navbar {
   margin: 0 auto;
   -webkit-box-align: center;
@@ -155,7 +150,7 @@ a {
 
 a {
   text-decoration: none;
-  color: var(--black);
+  color: var(--darkOrange);
 }
 
 .btn-container {
@@ -174,6 +169,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: 3rem;
 }
 
 .button-51 {
