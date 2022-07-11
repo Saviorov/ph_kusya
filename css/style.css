@@ -704,8 +704,14 @@ section {
 }
 
 @media screen and (max-width: 557px) {
+  .title {
+    font-size: 3rem;
+  }
   html {
-    font-size: 60%;
+    font-size: 90%;
+  }
+  .about__card p {
+    font-size: 3rem;
   }
   .gallery__title span::before {
     -webkit-transform: skew(-12deg) translateX(-10%);
