@@ -238,6 +238,7 @@ window.addEventListener('scroll', function () {
 
 $('.owl-carousel').owlCarousel({
     autoplay: true,
+    loop: true,
     autoplayTimeout: 2000,
     nav: false,
     responsiveClass: true,
@@ -245,18 +246,14 @@ $('.owl-carousel').owlCarousel({
         // от 0 и больше
         0: {
             items: 1,
-            nav: true
         },
         // от 600 и больше
         641: {
             items: 2,
-            nav: false
         },
         // от 1000 и больше
         1000: {
             items: 3,
-            nav: true,
-            loop: true
         }
     }
 })
