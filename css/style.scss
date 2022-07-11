@@ -60,6 +60,9 @@ body {
 
 li {
   list-style: none;
+  a{
+    color: var(--black);
+  }
 }
 
 .navbar {
@@ -448,6 +451,7 @@ section {
   padding: 30px 0;
 }
 .text-link{
+  font-size: 1rem;
 }
 .testi-avatar {
   position: absolute;
