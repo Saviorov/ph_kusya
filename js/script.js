@@ -235,9 +235,11 @@ window.addEventListener('scroll', function () {
 
 
 // slider 
+
 $('.owl-carousel').owlCarousel({
-    loop: true,
-    margin: 10,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    nav: false,
     responsiveClass: true,
     responsive: {
         // от 0 и больше
@@ -254,7 +256,7 @@ $('.owl-carousel').owlCarousel({
         1000: {
             items: 3,
             nav: true,
-            loop: false
+            loop: true
         }
     }
 })
